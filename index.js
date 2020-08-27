@@ -181,7 +181,7 @@ app.post('/todo', (req, res) => {
 });
 app.delete('/todo', (req, res) => {
   task.deleteOne({
-    task: req.query,
+    task: req.query.item,
     user: req.user.id
   }, (err, data) => {
     if (err) throw err;
