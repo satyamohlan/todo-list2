@@ -44,6 +44,8 @@ passport.use(
             let pro = new user({
               googleId: profile.id,
               username: profile.displayName,
+              photo: profile.photos[0].value
+
             });
             pro.save().then(() => {
               console.log('new user created' + pro);
