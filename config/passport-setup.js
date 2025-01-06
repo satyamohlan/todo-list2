@@ -24,6 +24,7 @@ passport.deserializeUser((id, done) => {
     done(null, data);
   });
 });
+
 passport.use(
   new GooogleStrategy({
       callbackURL: '/google/redirect',
